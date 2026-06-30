@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch",
     "build": "npx tailwindcss -i ./src/input.css -o ./src/output.css --minify",
-    "serve": "npx serve ."
+    "serve": "npx serve . -l 8888"
   },
   "keywords": [
     "portfolio",
