@@ -1,0 +1,21 @@
+{
+  "name": "simon-guillen-portfolio",
+  "version": "1.0.0",
+  "description": "Personal branding website for Simon Phillip Guillen - Frontend Engineer & Bassist",
+  "scripts": {
+    "dev": "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch",
+    "build": "npx tailwindcss -i ./src/input.css -o ./src/output.css --minify",
+    "serve": "npx serve ."
+  },
+  "keywords": [
+    "portfolio",
+    "frontend",
+    "developer",
+    "musician"
+  ],
+  "author": "Simon Phillip Guillen",
+  "license": "MIT",
+  "devDependencies": {
+    "tailwindcss": "^3.4.1"
+  }
+}

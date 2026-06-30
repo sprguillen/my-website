@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Simon Phillip Guillen - Frontend Engineer from Davao City, Philippines. I build interfaces with rhythm, precision, and intent."
+    />
+    <meta name="author" content="Simon Phillip Guillen" />
+    <meta
+      name="keywords"
+      content="frontend engineer, React, Next.js, TypeScript, web developer, UI developer, Davao City"
+    />
+    <title>Simon Phillip Guillen - Frontend Engineer</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS -->
+    <link href="./src/output.css" rel="stylesheet" />
+  </head>
+  <body class="bg-bg-primary text-text-primary antialiased">
+    <!-- Background Glow Effects -->
+    <div class="fixed inset-0 overflow-hidden pointer-events-none z-0">
+      <div
+        id="glow-1"
+        class="absolute w-96 h-96 bg-accent-purple/20 rounded-full blur-3xl animate-glow-pulse"
+        style="top: 10%; left: 20%"
+      ></div>
+      <div
+        id="glow-2"
+        class="absolute w-96 h-96 bg-accent-cyan/10 rounded-full blur-3xl animate-glow-pulse"
+        style="top: 50%; right: 10%; animation-delay: 2s"
+      ></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav
+      id="navbar"
+      class="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
+    >
+      <div class="max-w-7xl mx-auto px-6 py-4">
+        <div
+          class="flex items-center justify-between bg-bg-surface/80 backdrop-blur-lg border border-border rounded-2xl px-6 py-3"
+        >
+          <!-- Logo -->
+          <a href="#hero" class="flex items-center space-x-2 group">
+            <div
+              class="w-10 h-10 rounded-lg bg-gradient-to-br from-accent-purple to-accent-cyan flex items-center justify-center font-bold text-lg transition-transform group-hover:scale-105"
+            >
+              SG
+            </div>
+          </a>
+
+          <!-- Desktop Navigation -->
+          <div class="hidden md:flex items-center space-x-8">
+            <a
+              href="#work"
+              class="nav-link text-sm text-text-muted hover:text-text-primary transition-colors"
+              >Work</a
+            >
+            <a
+              href="#services"
+              class="nav-link text-sm text-text-muted hover:text-text-primary transition-colors"
+              >Services</a
+            >
+            <a
+              href="#about"
+              class="nav-link text-sm text-text-muted hover:text-text-primary transition-colors"
+              >About</a
+            >
+            <a
+              href="#contact"
+              class="px-4 py-2 bg-accent-purple hover:bg-accent-purple/90 text-white text-sm font-medium rounded-lg transition-colors"
+              >Contact</a
+            >
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <button
+            id="mobile-menu-btn"
+            class="md:hidden p-2 text-text-muted hover:text-text-primary"
+            aria-label="Toggle menu"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div
+          id="mobile-menu"
+          class="hidden md:hidden mt-4 bg-bg-surface/95 backdrop-blur-lg border border-border rounded-2xl p-6 space-y-4"
+        >
+          <a
+            href="#work"
+            class="block text-text-muted hover:text-text-primary transition-colors"
+            >Work</a
+          >
+          <a
+            href="#services"
+            class="block text-text-muted hover:text-text-primary transition-colors"
+            >Services</a
+          >
+          <a
+            href="#about"
+            class="block text-text-muted hover:text-text-primary transition-colors"
+            >About</a
+          >
+          <a
+            href="#contact"
+            class="block px-4 py-2 bg-accent-purple hover:bg-accent-purple/90 text-white text-sm font-medium rounded-lg transition-colors text-center"
+            >Contact</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="relative z-10">
+      <!-- Hero Section -->
+      <section
+        id="hero"
+        class="min-h-screen flex items-center justify-center px-6 pt-24"
+      >
+        <div class="max-w-4xl mx-auto text-center reveal">
+          <!-- Pixel Avatar -->
+          <div class="mb-8 flex justify-center">
+            <div
+              class="w-32 h-32 bg-gradient-to-br from-accent-purple to-accent-cyan rounded-2xl p-1"
+            >
+              <div class="w-full h-full bg-bg-surface rounded-xl overflow-hidden">
+                <img 
+                  src="./images/avatar.png" 
+                  alt="Simon Phillip Guillen - Pixel Art Avatar" 
+                  class="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+          </div>
+
+          <h1
+            class="text-5xl md:text-7xl font-bold mb-4 bg-gradient-to-r from-text-primary to-text-muted bg-clip-text text-transparent"
+          >
+            Simon Phillip Guillen
+          </h1>
+
+          <p class="text-xl md:text-2xl text-text-muted mb-6">
+            Frontend Engineer
+          </p>
+
+          <p class="text-3xl md:text-4xl font-semibold mb-8 leading-tight">
+            I build interfaces with rhythm,<br />precision, and intent.
+          </p>
+
+          <p class="text-lg text-text-muted max-w-2xl mx-auto mb-12 leading-relaxed">
+            I'm a frontend engineer from Davao City, Philippines specializing in
+            React, Next.js, TypeScript, and polished product interfaces. I'm obsessed
+            with structure, timing, and detail — building interfaces that are both
+            technically excellent and delightful to use.
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="#work"
+              class="px-8 py-4 bg-accent-purple hover:bg-accent-purple/90 text-white font-medium rounded-lg transition-all hover:scale-105"
+              >View Work</a
+            >
+            <a
+              href="#contact"
+              class="px-8 py-4 bg-bg-surface hover:bg-bg-surface/80 border border-border text-text-primary font-medium rounded-lg transition-all hover:scale-105"
+              >Contact Me</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- Selected Work Section -->
+      <section id="work" class="py-24 px-6">
+        <div class="max-w-6xl mx-auto">
+          <div class="mb-12 reveal">
+            <p class="text-xs font-mono text-accent-cyan uppercase tracking-wider mb-4">
+              Selected Work
+            </p>
+            <h2 class="text-4xl md:text-5xl font-bold">Recent Projects</h2>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-8">
+            <!-- Moneybox Project -->
+            <article
+              class="group bg-bg-surface border border-border rounded-2xl p-8 hover:border-accent-purple/50 transition-all duration-300 reveal"
+            >
+              <div class="mb-6">
+                <h3 class="text-2xl font-bold mb-3">Moneybox</h3>
+                <p class="text-text-muted mb-6 leading-relaxed">
+                  Australian investment onboarding and dashboard platform built
+                  with React, TypeScript, and Redux Toolkit. Multi-step forms,
+                  real-time validation, and polished UI components.
+                </p>
+              </div>
+
+              <div class="mb-6">
+                <p class="text-xs font-mono text-text-muted uppercase mb-3">
+                  Highlights
+                </p>
+                <ul class="space-y-2 text-sm text-text-muted">
+                  <li class="flex items-start">
+                    <span class="text-accent-cyan mr-2">•</span>
+                    Complex multi-step onboarding flow with form validation
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-accent-cyan mr-2">•</span>
+                    Investment dashboard with real-time portfolio tracking
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-accent-cyan mr-2">•</span>
+                    Responsive design with accessibility best practices
+                  </li>
+                </ul>
+              </div>
+
+              <div class="flex flex-wrap gap-2 mb-6">
+                <span
+                  class="px-3 py-1 bg-accent-purple/10 text-accent-purple text-xs font-mono rounded-md"
+                  >React</span
+                >
+                <span
+                  class="px-3 py-1 bg-accent-purple/10 text-accent-purple text-xs font-mono rounded-md"
+                  >TypeScript</span
+                >
+                <span
+                  class="px-3 py-1 bg-accent-purple/10 text-accent-purple text-xs font-mono rounded-md"
+                  >Redux Toolkit</span
+                >
+                <span
+                  class="px-3 py-1 bg-accent-purple/10 text-accent-purple text-xs font-mono rounded-md"
+                  >Tailwind CSS</span
+                >
+                <span
+                  class="px-3 py-1 bg-accent-purple/10 text-accent-purple text-xs font-mono rounded-md"
+                  >React Hook Form</span
+                >
+              </div>
+
+              <!-- Image Gallery -->
+              <div>
+                <p class="text-xs font-mono text-text-muted uppercase mb-3">
+                  Project Screenshots
+                </p>
+                <div class="grid grid-cols-2 gap-3">
+                  <button
+                    class="gallery-image group relative overflow-hidden rounded-lg border border-border hover:border-accent-purple/50 transition-all cursor-pointer"
+                    data-image="./images/projects/Moneybox1.png"
+                    data-caption="Moneybox Dashboard"
+                  >
+                    <img
+                      src="./images/projects/Moneybox1.png"
+                      alt="Moneybox Dashboard"
+                      class="w-full h-auto object-cover transition-transform group-hover:scale-105"
+                    />
+                    <div class="absolute inset-0 bg-gradient-to-t from-bg-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-center pb-3">
+                      <span class="text-xs text-text-primary font-medium">View Full Size</span>
+                    </div>
+                  </button>
+                  <button
+                    class="gallery-image group relative overflow-hidden rounded-lg border border-border hover:border-accent-purple/50 transition-all cursor-pointer"
+                    data-image="./images/projects/Moneybox2.png"
+                    data-caption="Investment Details"
+                  >
+                    <img
+                      src="./images/projects/Moneybox2.png"
+                      alt="Moneybox Investment Details"
+                      class="w-full h-auto object-cover transition-transform group-hover:scale-105"
+                    />
+                    <div class="absolute inset-0 bg-gradient-to-t from-bg-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-center pb-3">
+                      <span class="text-xs text-text-primary font-medium">View Full Size</span>
+                    </div>
+                  </button>
+                  <button
+                    class="gallery-image group relative overflow-hidden rounded-lg border border-border hover:border-accent-purple/50 transition-all cursor-pointer"
+                    data-image="./images/projects/Moneybox3.png"
+                    data-caption="Investment Options"
+                  >
+                    <img
+                      src="./images/projects/Moneybox3.png"
+                      alt="Moneybox Investment Options"
+                      class="w-full h-auto object-cover transition-transform group-hover:scale-105"
+                    />
+                    <div class="absolute inset-0 bg-gradient-to-t from-bg-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-center pb-3">
+                      <span class="text-xs text-text-primary font-medium">View Full Size</span>
+                    </div>
+                  </button>
+                  <button
+                    class="gallery-image group relative overflow-hidden rounded-lg border border-border hover:border-accent-purple/50 transition-all cursor-pointer"
+                    data-image="./images/projects/Moneybox4.png"
+                    data-caption="Portfolio Overview"
+                  >
+                    <img
+                      src="./images/projects/Moneybox4.png"
+                      alt="Moneybox Portfolio Overview"
+                      class="w-full h-auto object-cover transition-transform group-hover:scale-105"
+                    />
+                    <div class="absolute inset-0 bg-gradient-to-t from-bg-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-center pb-3">
+                      <span class="text-xs text-text-primary font-medium">View Full Size</span>
+                    </div>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- BUTN 2.0 Project -->
+            <article
+              class="group bg-bg-surface border border-border rounded-2xl p-8 hover:border-accent-cyan/50 transition-all duration-300 reveal"
+            >
+              <div class="mb-6">
+                <h3 class="text-2xl font-bold mb-3">BUTN 2.0</h3>
+                <p class="text-text-muted mb-6 leading-relaxed">
+                  Multi-tenant white-label lending application platform. Built
+                  scalable frontend architecture supporting multiple client
+                  brands with dynamic theming and configuration.
+                </p>
+              </div>
+
+              <div class="mb-6">
+                <p class="text-xs font-mono text-text-muted uppercase mb-3">
+                  Highlights
+                </p>
+                <ul class="space-y-2 text-sm text-text-muted">
+                  <li class="flex items-start">
+                    <span class="text-accent-purple mr-2">•</span>
+                    White-label architecture with dynamic theming system
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-accent-purple mr-2">•</span>
+                    Loan application flow with document upload and verification
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-accent-purple mr-2">•</span>
+                    Admin dashboard for multi-tenant management
+                  </li>
+                </ul>
+              </div>
+
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="px-3 py-1 bg-accent-cyan/10 text-accent-cyan text-xs font-mono rounded-md"
+                  >React</span
+                >
+                <span
+                  class="px-3 py-1 bg-accent-cyan/10 text-accent-cyan text-xs font-mono rounded-md"
+                  >Next.js</span
+                >
+                <span
+                  class="px-3 py-1 bg-accent-cyan/10 text-accent-cyan text-xs font-mono rounded-md"
+                  >TypeScript</span
+                >
+                <span
+                  class="px-3 py-1 bg-accent-cyan/10 text-accent-cyan text-xs font-mono rounded-md"
+                  >Material-UI</span
+                >
+                <span
+                  class="px-3 py-1 bg-accent-cyan/10 text-accent-cyan text-xs font-mono rounded-md"
+                  >AWS</span
+                >
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- What I Do Section -->
+      <section id="services" class="py-24 px-6 bg-bg-secondary/50">
+        <div class="max-w-6xl mx-auto">
+          <div class="mb-12 reveal">
+            <p class="text-xs font-mono text-accent-purple uppercase tracking-wider mb-4">
+              What I Do
+            </p>
+            <h2 class="text-4xl md:text-5xl font-bold mb-4">
+              Services & Expertise
+            </h2>
+            <p class="text-text-muted text-lg max-w-2xl">
+              Specialized in building production-ready frontend applications
+              with modern technologies and best practices.
+            </p>
+          </div>
+
+          <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div
+              class="bg-bg-surface border border-border rounded-xl p-6 hover:border-accent-purple/30 transition-all reveal"
+            >
+              <div class="text-accent-purple text-2xl mb-4">⚛️</div>
+              <h3 class="text-lg font-semibold mb-2">Frontend Web Apps</h3>
+              <p class="text-sm text-text-muted">
+                Complex, performant web applications with modern architecture
+              </p>
+            </div>
+
+            <div
+              class="bg-bg-surface border border-border rounded-xl p-6 hover:border-accent-purple/30 transition-all reveal"
+            >
+              <div class="text-accent-cyan text-2xl mb-4">⚡</div>
+              <h3 class="text-lg font-semibold mb-2">React / Next.js Development</h3>
+              <p class="text-sm text-text-muted">
+                Server and client-side React applications with TypeScript
+              </p>
+            </div>
+
+            <div
+              class="bg-bg-surface border border-border rounded-xl p-6 hover:border-accent-purple/30 transition-all reveal"
+            >
+              <div class="text-accent-purple text-2xl mb-4">🎨</div>
+              <h3 class="text-lg font-semibold mb-2">UI Implementation</h3>
+              <p class="text-sm text-text-muted">
+                Pixel-perfect designs from Figma to production code
+              </p>
+            </div>
+
+            <div
+              class="bg-bg-surface border border-border rounded-xl p-6 hover:border-accent-purple/30 transition-all reveal"
+            >
+              <div class="text-accent-cyan text-2xl mb-4">🧩</div>
+              <h3 class="text-lg font-semibold mb-2">Design Systems</h3>
+              <p class="text-sm text-text-muted">
+                Scalable component libraries and design systems
+              </p>
+            </div>
+
+            <div
+              class="bg-bg-surface border border-border rounded-xl p-6 hover:border-accent-purple/30 transition-all reveal"
+            >
+              <div class="text-accent-purple text-2xl mb-4">📋</div>
+              <h3 class="text-lg font-semibold mb-2">Multi-Step Forms</h3>
+              <p class="text-sm text-text-muted">
+                Complex form flows with validation and state management
+              </p>
+            </div>
+
+            <div
+              class="bg-bg-surface border border-border rounded-xl p-6 hover:border-accent-purple/30 transition-all reveal"
+            >
+              <div class="text-accent-cyan text-2xl mb-4">📊</div>
+              <h3 class="text-lg font-semibold mb-2">Dashboards</h3>
+              <p class="text-sm text-text-muted">
+                Data-rich admin panels and analytics interfaces
+              </p>
+            </div>
+
+            <div
+              class="bg-bg-surface border border-border rounded-xl p-6 hover:border-accent-purple/30 transition-all reveal"
+            >
+              <div class="text-accent-purple text-2xl mb-4">📱</div>
+              <h3 class="text-lg font-semibold mb-2">Responsive UI</h3>
+              <p class="text-sm text-text-muted">
+                Mobile-first, accessible interfaces that work everywhere
+              </p>
+            </div>
+
+            <div
+              class="bg-bg-surface border border-border rounded-xl p-6 hover:border-accent-purple/30 transition-all reveal"
+            >
+              <div class="text-accent-cyan text-2xl mb-4">🚀</div>
+              <h3 class="text-lg font-semibold mb-2">Performance Optimization</h3>
+              <p class="text-sm text-text-muted">
+                Fast load times, smooth interactions, optimized bundles
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="py-24 px-6">
+        <div class="max-w-4xl mx-auto">
+          <div class="mb-12 reveal">
+            <p class="text-xs font-mono text-accent-cyan uppercase tracking-wider mb-4">
+              About
+            </p>
+            <h2 class="text-4xl md:text-5xl font-bold">
+              Engineering with Discipline
+            </h2>
+          </div>
+
+          <div class="space-y-6 text-lg text-text-muted leading-relaxed reveal">
+            <p>
+              I'm a frontend engineer from <strong class="text-text-primary">Davao City, Philippines</strong>, 
+              specializing in building modern web applications with React, Next.js, and TypeScript. 
+              I've worked on complex projects ranging from investment platforms to multi-tenant lending 
+              applications, always focusing on user experience, performance, and code quality.
+            </p>
+
+            <p>
+              I believe great software interfaces should feel effortless to use, even when they're 
+              solving complex problems. Whether it's a multi-step onboarding flow or a real-time 
+              dashboard, I design and build interfaces that are 
+              <strong class="text-text-primary">intuitive, performant, and delightful</strong>.
+            </p>
+
+            <p>
+              My work is driven by attention to detail and a passion for 
+              <strong class="text-text-primary">precision, timing, and structure</strong>. 
+              I care deeply about writing clean, maintainable code and creating experiences that 
+              users love. Every project is an opportunity to solve real problems with elegant solutions.
+            </p>
+          </div>
+
+          <div class="mt-12 grid sm:grid-cols-3 gap-6 reveal">
+            <div class="bg-bg-surface border border-border rounded-xl p-6 text-center">
+              <p class="text-3xl font-bold text-accent-purple mb-2">5+</p>
+              <p class="text-sm text-text-muted">Years Experience</p>
+            </div>
+            <div class="bg-bg-surface border border-border rounded-xl p-6 text-center">
+              <p class="text-3xl font-bold text-accent-cyan mb-2">10+</p>
+              <p class="text-sm text-text-muted">Projects Delivered</p>
+            </div>
+            <div class="bg-bg-surface border border-border rounded-xl p-6 text-center">
+              <p class="text-3xl font-bold text-accent-purple mb-2">100%</p>
+              <p class="text-sm text-text-muted">Commitment to Quality</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="py-24 px-6 bg-bg-secondary/50">
+        <div class="max-w-4xl mx-auto">
+          <div class="text-center mb-12 reveal">
+            <p class="text-xs font-mono text-accent-purple uppercase tracking-wider mb-4">
+              Contact
+            </p>
+            <h2 class="text-4xl md:text-5xl font-bold mb-4">
+              Let's Build Something
+            </h2>
+            <p class="text-text-muted text-lg">
+              Available for frontend development projects and collaborations.
+            </p>
+          </div>
+
+          <div
+            class="bg-bg-surface border border-border rounded-2xl p-8 md:p-12 reveal"
+          >
+            <div class="grid md:grid-cols-2 gap-8 mb-8">
+              <div>
+                <p class="text-sm font-mono text-text-muted uppercase mb-3">
+                  Email
+                </p>
+                <div class="flex items-center space-x-2">
+                  <a
+                    href="mailto:spguillen@gmail.com"
+                    class="text-lg text-text-primary hover:text-accent-purple transition-colors"
+                    >spguillen@gmail.com</a
+                  >
+                  <button
+                    id="copy-email-btn"
+                    class="p-2 hover:bg-bg-primary rounded-lg transition-colors"
+                    aria-label="Copy email"
+                    title="Copy email"
+                  >
+                    <svg
+                      class="w-4 h-4 text-text-muted"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+
+              <div>
+                <p class="text-sm font-mono text-text-muted uppercase mb-3">
+                  Location
+                </p>
+                <p class="text-lg text-text-primary">
+                  Davao City, Philippines 🇵🇭
+                </p>
+              </div>
+            </div>
+
+            <div class="border-t border-border pt-8">
+              <p class="text-sm font-mono text-text-muted uppercase mb-4">
+                Links
+              </p>
+              <div class="flex flex-wrap gap-4">
+                <a
+                  href="https://github.com/spguillen"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="flex items-center space-x-2 px-4 py-2 bg-bg-primary hover:bg-bg-primary/80 border border-border rounded-lg transition-all hover:scale-105"
+                >
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                    />
+                  </svg>
+                  <span>GitHub</span>
+                </a>
+
+                <a
+                  href="https://linkedin.com/in/spguillen"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="flex items-center space-x-2 px-4 py-2 bg-bg-primary hover:bg-bg-primary/80 border border-border rounded-lg transition-all hover:scale-105"
+                >
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                    />
+                  </svg>
+                  <span>LinkedIn</span>
+                </a>
+
+                <a
+                  href="#"
+                  class="flex items-center space-x-2 px-4 py-2 bg-bg-primary hover:bg-bg-primary/80 border border-border rounded-lg transition-all hover:scale-105"
+                >
+                  <svg
+                    class="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                    />
+                  </svg>
+                  <span>Resume</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="mt-8 pt-8 border-t border-border text-center">
+              <a
+                href="mailto:spguillen@gmail.com"
+                class="inline-block px-8 py-4 bg-accent-purple hover:bg-accent-purple/90 text-white font-medium rounded-lg transition-all hover:scale-105"
+              >
+                Start a Project
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Image Modal -->
+    <div
+      id="image-modal"
+      class="fixed inset-0 bg-bg-primary/95 backdrop-blur-lg z-[100] hidden items-center justify-center p-4"
+    >
+      <!-- Close Button -->
+      <button
+        id="modal-close"
+        class="absolute top-6 right-6 w-10 h-10 bg-bg-surface hover:bg-bg-surface/80 border border-border rounded-lg flex items-center justify-center transition-colors z-10"
+        aria-label="Close modal"
+      >
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+
+      <!-- Previous Button -->
+      <button
+        id="modal-prev"
+        class="absolute left-6 w-10 h-10 bg-bg-surface hover:bg-bg-surface/80 border border-border rounded-lg flex items-center justify-center transition-colors"
+        aria-label="Previous image"
+      >
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg>
+      </button>
+
+      <!-- Next Button -->
+      <button
+        id="modal-next"
+        class="absolute right-6 w-10 h-10 bg-bg-surface hover:bg-bg-surface/80 border border-border rounded-lg flex items-center justify-center transition-colors"
+        aria-label="Next image"
+      >
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+      </button>
+
+      <!-- Image Container -->
+      <div class="max-w-6xl w-full flex flex-col items-center">
+        <img
+          id="modal-image"
+          src=""
+          alt=""
+          class="max-w-full max-h-[80vh] object-contain rounded-lg border border-border shadow-2xl"
+        />
+        <p
+          id="modal-caption"
+          class="mt-4 text-text-muted text-sm font-medium"
+        ></p>
+        <p
+          id="modal-counter"
+          class="mt-2 text-text-muted text-xs font-mono"
+        ></p>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="relative z-10 py-12 px-6 border-t border-border">
+      <div class="max-w-6xl mx-auto">
+        <div
+          class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0"
+        >
+          <div class="flex items-center space-x-2">
+            <div
+              class="w-8 h-8 rounded-lg bg-gradient-to-br from-accent-purple to-accent-cyan flex items-center justify-center font-bold text-sm"
+            >
+              SG
+            </div>
+            <span class="text-text-muted text-sm"
+              >© 2026 Simon Phillip Guillen</span
+            >
+          </div>
+
+          <p class="text-text-muted text-sm font-mono">
+            Interfaces with Rhythm
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="./src/main.js"></script>
+  </body>
+</html>
