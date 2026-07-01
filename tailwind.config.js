@@ -22,6 +22,9 @@ module.exports = {
           cyan: '#22D3EE',
           warm: '#F5E7C8',
           red: '#F87171',
+          orange: '#FB923C',
+          green: '#4ADE80',
+          teal: '#2DD4BF',
         },
       },
       fontFamily: {
