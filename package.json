@@ -1,10 +1,13 @@
 {
+  "homepage": "https://sprguillen.github.io/my-website",
   "name": "simon-guillen-portfolio",
   "version": "1.0.0",
   "description": "Personal branding website for Simon Phillip Guillen - Frontend Engineer & Bassist",
   "scripts": {
+    "deploy": "gh-pages -d build",
     "dev": "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch",
     "build": "npx tailwindcss -i ./src/input.css -o ./src/output.css --minify",
+    "predeploy": "npm run build",
     "serve": "npx serve . -l 8888"
   },
   "keywords": [
@@ -16,6 +19,7 @@
   "author": "Simon Phillip Guillen",
   "license": "MIT",
   "devDependencies": {
+    "gh-pages": "^6.3.0",
     "tailwindcss": "^3.4.1"
   }
 }
